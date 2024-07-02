@@ -75,4 +75,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Contact
 
-If you have any questions or feedback, please open an issue or contact me directly at [saadtahir5665@gmail.com].
+If you have any questions or feedback, please open an issue or contact me directly at saadtahir5665@gmail.com.
