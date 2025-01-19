@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 app.post('/chat', async (req, res) => {
     const { message } = req.body;
+    console.log(message)
     if(!message) return res.send('No prompt provided');
     const result = await genAI.getGenerativeModel({ model: "gemini-1.5-flash" }).generateContent(message);
     const response = await result.response;
