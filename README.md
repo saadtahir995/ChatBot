@@ -89,7 +89,7 @@ This project consists of two parts:
 
 3. **Run the backend server** (make sure you set up your server as required):
    ```bash
-   npm run start
+   npm run dev
    ```
 
    The backend should be accessible at `http://localhost:5174/api/route/chat`. Ensure your frontend is configured to connect to this endpoint.
