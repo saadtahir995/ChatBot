@@ -6,9 +6,11 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors({
-    origin: 'http://localhost:5173',  // Allow requests from frontend server
+    origin: ['https://chat-bot-frontend-smoky.vercel.app','http://localhost:5173'],  // Allow requests from frontend server
     methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Allow methods
     allowedHeaders: ['Content-Type', 'Authorization'],  // Allow headers
+    credentials: true,  // Allow credentials
+    optionsSuccessStatus: 200  // For successful options requests
 }));
 const ChatRoute = require( './Routes/chatapi.js')
 app.use('/api/route',ChatRoute)
