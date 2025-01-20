@@ -42,6 +42,11 @@ const ChatPage: React.FC = () => {
       setLoading(false);
     }
   };
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter" && !loading) {
+      handleSend();
+    }
+  }
 
   return (
     <div className="chat-container">
@@ -68,6 +73,7 @@ const ChatPage: React.FC = () => {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          onKeyDown={handleKeyDown} // Listen for Enter key
           placeholder="Type your message..."
         />
         <button onClick={handleSend} disabled={loading}>
