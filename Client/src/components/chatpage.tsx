@@ -17,6 +17,7 @@ const ChatPage: React.FC = () => {
 
     try {
       const response = await fetch("https://chat-bot-backend-smoky.vercel.app/api/route/chat", {
+        //const response = await fetch("http://localhost:5174/api/route/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input }),
