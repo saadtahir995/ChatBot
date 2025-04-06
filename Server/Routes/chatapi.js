@@ -20,7 +20,7 @@ app.post('/chat', async (req, res) => {
         ${message}
     `;
 
-    const result = await genAI.getGenerativeModel({ model: "gemini-1.5-flash" }).generateContent(prompt);
+    const result = await genAI.getGenerativeModel({ model: "gemini-2.0-flash" }).generateContent(prompt);
     const response = await result.response;
     const text = await response.text();
     res.send({ text });
